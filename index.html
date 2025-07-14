@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阿佐ヶ谷というまちシアター | 展覧会のお知らせ</title>
+    <!-- Tailwind CSSを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fontsからフォントを読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ポスターの雰囲気に合わせたカスタムスタイル */
+        :root {
+            --key-blue: #007BC8;
+            --key-orange: #F04E23;
+        }
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #fff; /* 背景色を白に */
+            color: #333;
+        }
+        h1, h2, h3, .font-rounded {
+            font-family: 'M+PLUS+Rounded+1c', sans-serif;
+        }
+        .key-blue { color: var(--key-blue); }
+        .key-orange-border { border-color: var(--key-orange); }
+
+        /* ドット柄の背景を疑似要素で作成 */
+        .main-container::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 30%;
+            height: 40%;
+            background-image: radial-gradient(var(--key-blue) 1px, transparent 1px);
+            background-size: 15px 15px;
+            opacity: 0.5;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="py-10 sm:py-16">
+
+    <!-- メインコンテンツのコンテナ (横幅を広げるために max-w-2xl から max-w-4xl に変更) -->
+    <div class="main-container relative max-w-4xl mx-auto px-6">
+
+        <!-- 「上映中」の円形モチーフ -->
+        <div class="absolute top-0 right-0 sm:right-[-2rem] z-10">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 border-2 key-orange-border rounded-full flex items-center justify-center">
+                <div class="text-center font-rounded font-bold">
+                    <span class="key-blue">阿佐ヶ谷</span><br>
+                    <span>上映中</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ヘッダータイトル -->
+        <header class="mb-8 pt-16 sm:pt-10">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black key-blue leading-tight tracking-wider">
+                阿佐ヶ谷<br>というまち<br>シアター
+            </h1>
+        </header>
+
+        <!-- メイン画像 -->
+        <section class="mb-10 shadow-lg rounded-md overflow-hidden">
+            <img src="2.webp" alt="" class="w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e2e8f0/334155?text=Image';">
+        </section>
+
+        <!-- 説明文 -->
+        <section class="mb-12 space-y-6">
+            <p class="text-base sm:text-lg leading-relaxed key-blue font-bold">
+                阿佐ヶ谷の街角にはこんなにもたくさんの不思議な風景がある。あなただけの「これってもしかして…！」を探すためのインスタレーションアート。
+            </p>
+            <div class="font-sans text-gray-700 leading-relaxed space-y-4 text-sm sm:text-base">
+                <p>
+                    アーティストコレクティブ「を」による、阿佐ヶ谷の街をテーマにした映像インスタレーション。 本展は、街の物理的な風景と、それを見る人の記憶や想像力が交差することで生まれる風景の「多層性」に注目します。
+                </p>
+                <p>
+                    会場では、メンバーが阿佐ヶ谷の街角で発見した様々な“不思議な現象”を捉えた映像が、複数のモニターから同時多発的に上映されます。
+                </p>
+            </div>
+        </section>
+
+        <!-- 詳細情報 -->
+        <section class="font-rounded font-bold text-xl sm:text-2xl space-y-6">
+            <!-- 日時 -->
+            <div>
+                <p class="key-blue">8/2<span class="text-sm font-sans">(金)</span> - 8/3<span class="text-sm font-sans">(土)</span></p>
+                <p class="text-3xl sm:text-4xl">10:00 - 17:00</p>
+            </div>
+            
+            <!-- 会場 -->
+            <div>
+                <p class="key-blue">入場無料</p>
+                <div class="flex items-baseline space-x-2">
+                    <p class="text-3xl sm:text-4xl">suha Asagaya</p>
+                    <a href="https://x.gd/SOVrA" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-500 hover:text-orange-500 transition-colors duration-300 font-sans">
+                        [MAP]
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
